@@ -7,5 +7,9 @@ $(document).ready(function() {
     $("#nameSummary").text(name);
     $("#emailSummary").text(email);
     $("#messageSummary").text(message);
+
+    $("#name").val("");
+    $("#email").val("");
+    $("#message").val("");
   });
 });
