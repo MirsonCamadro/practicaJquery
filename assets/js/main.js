@@ -4,12 +4,19 @@ $(document).ready(function() {
     var email = $("#email").val();
     var message = $("#message").val();
 
-    $("#nameSummary").text(name);
-    $("#emailSummary").text(email);
-    $("#messageSummary").text(message);
-
-    $("#name").val("");
-    $("#email").val("");
-    $("#message").val("");
+    if (name === "" || email === "" || message === "") {
+      Swal.fire({
+        title: "Todos los campos son obligatorios",
+        icon: "warning"
+      });
+    } else {
+      $("#nameSummary").text(name);
+      $("#emailSummary").text(email);
+      $("#messageSummary").text(message);
+  
+      $("#name").val("");
+      $("#email").val("");
+      $("#message").val("");
+    }
   });
 });
